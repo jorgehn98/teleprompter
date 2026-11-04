@@ -4,7 +4,7 @@ Floating teleprompter strip meant to be used **on top of the phone's camera app*
 It does not include its own camera: it draws over the app you are using, usually the
 camera, and you record with the one you always use.
 
-![Teleprompter strip over the camera preview](docs/screenshots/preview.png)
+![Teleprompter strip over the camera preview](docs/screenshots/strip-preview.png)
 
 Scripts in plain text (`.txt`), no documents, no images, no formatting.
 
