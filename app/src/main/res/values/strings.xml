@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Teleprompter</string>
+    <string name="notification_channel">Teleprompter running</string>
+    <string name="notification_title">Teleprompter running</string>
+    <string name="notification_text">Tap the strip to pause or move the script.</string>
+    <string name="notification_stop">Stop</string>
+
+    <string name="demo_script_title">Guión de prueba</string>
+    <string name="demo_script">Este es el guion de prueba. Sirve para ajustar color del texto, color y opacidad del fondo, tamaño de letra y velocidad sin tocar tus guiones reales.\n\nToca la franja para pausar la lectura y vuelve a tocar para reanudarla.\n\nMantén el dedo y arrastra hacia abajo para retroceder en el texto, o hacia arriba para avanzar. Al soltar, el guion sigue pasando solo desde donde lo dejaste.\n\nHaz doble toque para cerrar el teleprompter cuando termines de grabar.\n\nSi el texto se lee mal sobre la imagen de la cámara, sube la opacidad del fondo. Si tapa demasiado, bájala.\n\nCuando termines de probar puedes borrar este guion: no volverá a crearse, solo se añade la primera vez que se instala la aplicación.</string>
+</resources>
