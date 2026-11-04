@@ -30,6 +30,10 @@ you already use. Scripts are plain `.txt` files stored inside the app.
 Requires JDK 17 or newer and the Android SDK. Provide `sdk.dir` in
 `local.properties` or set `ANDROID_HOME`.
 
+The release build is signed with the local debug key unless `keystore.properties`
+is present, in which case that key is used. Never commit the keystore or its
+properties file.
+
 ## Layout
 
 ```

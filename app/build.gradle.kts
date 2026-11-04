@@ -1,5 +1,15 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
+}
+
+// Release signing is optional. With keystore.properties present the release build is
+// signed with that key; without it, it falls back to the local debug key, which is
+// enough for sideloading your own build.
+val keystoreProperties = Properties().apply {
+    val file = rootProject.file("keystore.properties")
+    if (file.isFile) file.inputStream().use(::load)
 }
 
 android {
@@ -19,15 +29,25 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    buildTypes {
-        release {
-            // Manual install: the release build is signed with the local debug key.
-            signingConfig = signingConfigs.getByName("debug")
-            isMinifyEnabled = false
+    signingConfigs {
+        if (!keystoreProperties.isEmpty) {
+            create("release") {
+                storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            }
         }
     }
 
-    dependencies {
-        testImplementation("junit:junit:4.13.2")
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
+            isMinifyEnabled = false
+        }
     }
+}
+
+dependencies {
+    testImplementation("junit:junit:4.13.2")
 }

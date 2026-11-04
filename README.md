@@ -11,6 +11,12 @@ Scripts in plain text (`.txt`), no documents, no images, no formatting.
 Android only (Android 9 / API 28 or newer). It is a personal project, installed
 by building it; it is not published on any app store.
 
+## Download
+
+Grab the latest APK from [Releases](https://github.com/jorgehn98/teleprompter/releases/latest)
+and install it on the phone. On first launch the app asks for the "Appear on top"
+permission.
+
 ## How to use it
 
 1. You open the app and pick a script (or create/import one). On the first
